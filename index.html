@@ -20,7 +20,7 @@
     <!-- title -->
     <title>Document</title>
   </head>
-  <body>
+  <body class="bg-[#F0FDF4]">
     <!-- navBar -->
     <header class="bg-[#15803D] text-white">
       <div class="navbar w-11/12 mx-auto">
@@ -65,7 +65,9 @@
           </ul>
         </div>
         <div class="navbar-end">
-          <button class="bg-[#FFD100] hover:bg-yellow-400 px-3 py-2 rounded-3xl text-md">
+          <button
+            class="bg-[#FFD100] hover:bg-yellow-400 px-3 py-2 rounded-3xl text-md"
+          >
             <a class="text-[#15803D]">Plant a Tree</a>
           </button>
         </div>
@@ -78,8 +80,12 @@
           <img src="./assets/hero-leaf1.png" alt="" />
         </div>
         <div class="flex flex-col items-center">
-          <h1 class="text-[#1F2937] text-3xl text-center font-bold mb-2">Plant a Tree, Grow a Future</h1>
-          <p class="text-gray-700 mb-8 max-w-lg mx-auto text-sm text-center md:text-base">
+          <h1 class="text-[#1F2937] text-3xl text-center font-bold mb-2">
+            Plant a Tree, Grow a Future
+          </h1>
+          <p
+            class="text-gray-700 mb-8 max-w-lg mx-auto text-sm text-center md:text-base"
+          >
             Join our mission to plant 1 million trees and make the Earth greener
             for future generations.
           </p>
@@ -91,6 +97,115 @@
         </div>
         <div class="w-1/4 hidden md:block">
           <img src="./assets/hero-leaf2.png" alt="" />
+        </div>
+      </div>
+    </section>
+    <!-- Choose you Trees -->
+    <section class="w-11/12 mx-auto">
+      <h1 class="text-center mt-20 mb-8 text-3xl font-semibold text-[#1F2937]">
+        Choose Your Trees
+      </h1>
+      <div class="grid grid-cols-[1.75fr_8.75fr_1.5fr] gap-5">
+        <!-- Categories -->
+        <div class="">
+          <h1 class="text-xl font-semibold">Categories</h1>
+          <div >
+            <ul class="space-y-3 mt-3">
+              <li>Lorem, ipsum.</li>
+              <li>Suscipit, necessitatibus.</li>
+              <li>Quo, obcaecati?</li>
+              <li>Sapiente, sequi!</li>
+              <li>Magni, similique!</li>
+            </ul>
+          </div>
+        </div>
+        <!-- Cards Section -->
+        <div class="grid grid-cols-3 gap-5">
+          <!-- Card-1 -->
+          <div class="card bg-base-100 shadow-sm p-4">
+            <figure class="">
+              <img
+                src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                alt="Shoes"
+                class="rounded-xl"
+              />
+            </figure>
+            <div class="items-center">
+              <div class="my-3">
+                <h2 class="card-title">Card Title</h2>
+                <p>
+                  A card component has a figure, a body part, and inside body
+                  there are title and actions parts
+                </p>
+                <div class="flex justify-between items-center mt-2">
+                  <p class="btn bg-[#DCFCE7] text-[#15803D] rounded-3xl">Fruit Tree</p>
+                  <p class="font-bold text-lg">$500</p>
+                </div>
+              </div>
+
+              <button class="btn btn-primary w-full rounded-3xl bg-[#15803D] border-none">
+                Add to Cart
+              </button>
+            </div>
+          </div>
+          <!-- card 2 -->
+          <div class="card bg-base-100 shadow-sm p-4">
+            <figure class="">
+              <img
+                src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                alt="Shoes"
+                class="rounded-xl"
+              />
+            </figure>
+            <div class="items-center">
+              <div class="my-3">
+                <h2 class="card-title">Card Title</h2>
+                <p>
+                  A card component has a figure, a body part, and inside body
+                  there are title and actions parts
+                </p>
+                <div class="flex justify-between items-center mt-2">
+                  <p class="btn bg-[#DCFCE7] text-[#15803D] rounded-3xl">Fruit Tree</p>
+                  <p class="font-bold text-lg">$500</p>
+                </div>
+              </div>
+
+              <button class="btn btn-primary w-full rounded-3xl bg-[#15803D] border-none">
+                Add to Cart
+              </button>
+            </div>
+          </div>
+          <!-- card-3 -->
+          <div class="card bg-base-100 shadow-sm p-4">
+            <figure class="">
+              <img
+                src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                alt="Shoes"
+                class="rounded-xl"
+              />
+            </figure>
+            <div class="items-center">
+              <div class="my-3">
+                <h2 class="card-title">Card Title</h2>
+                <p>
+                  A card component has a figure, a body part, and inside body
+                  there are title and actions parts
+                </p>
+                <div class="flex justify-between items-center mt-2">
+                  <p class="btn bg-[#DCFCE7] text-[#15803D] rounded-3xl">Fruit Tree</p>
+                  <p class="font-bold text-lg">$500</p>
+                </div>
+              </div>
+
+              <button class="btn btn-primary w-full rounded-3xl bg-[#15803D] border-none">
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- cart -->
+        <div class="bg-white h-full p-3 rounded-xl">
+          <h1 class="text-xl font-semibold">Your cart</h1>
         </div>
       </div>
     </section>
