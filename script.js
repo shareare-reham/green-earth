@@ -11,7 +11,7 @@ const displayCategories = (categories) => {
   for (const category of categories) {
     const categoryList = document.createElement("div");
     categoryList.innerHTML = `
-    <li id="category-${category.id}" onclick="loadPlantsByCat(${category.id})">${category.category_name}</li>
+    <li id="${category.id}" onclick="loadPlantsByCat(${category.id})">${category.category_name}</li>
     `;
     categoriesContainer.appendChild(categoryList);
   }
@@ -29,7 +29,7 @@ const displayAllPlants = (plants) => {
   for (const plant of plants) {
     const cardDiv = document.createElement("div");
     cardDiv.innerHTML = `
-        <div class="card bg-base-100 shadow-sm p-4 h-full flex flex-col">
+        <div class="card bg-white shadow-sm p-4 h-full flex flex-col">
             <figure class="">
                 <img
                 src="${plant.image}"
@@ -64,5 +64,18 @@ const loadPlantsByCat = (id) => {
   const url = `https://openapi.programming-hero.com/api/category/${id}`;
   fetch(url)
     .then((res) => res.json())
-    .then((json) => displayAllPlants(json.plants));
+    .then((json) => {
+      displayAllPlants(json.plants);
+      activeCat(id);
+    });
 };
+const removeAtvBtn = () => {
+  const catBtns = document.querySelectorAll(".active-btn");
+  catBtns.forEach((btn) => btn.classList.remove("active-btn"));
+};
+const activeCat = (id) => {
+  removeAtvBtn();
+  const activeBtn = document.getElementById(id);
+  activeBtn.classList.add("active-btn");
+};
+removeAtvBtn();
