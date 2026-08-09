@@ -11,7 +11,7 @@ const displayCategories = (categories) => {
   for (const category of categories) {
     const categoryList = document.createElement("div");
     categoryList.innerHTML = `
-    <li id="${category.id}" onclick="loadPlantsByCat(${category.id})">${category.category_name}</li>
+    <li id="${category.id}" class="cat-btn"onclick="loadPlantsByCat(${category.id})">${category.category_name}</li>
     `;
     categoriesContainer.appendChild(categoryList);
   }
