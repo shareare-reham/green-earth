@@ -11,7 +11,7 @@ const displayCategories = (categories) => {
   for (const category of categories) {
     const categoryList = document.createElement("div");
     categoryList.innerHTML = `
-    <li>${category.category_name}</li>
+    <li id="category-${category.id}" onclick="loadPlantsByCat(${category.id})">${category.category_name}</li>
     `;
     categoriesContainer.appendChild(categoryList);
   }
@@ -59,4 +59,10 @@ const displayAllPlants = (plants) => {
         `;
     cardsContainer.appendChild(cardDiv);
   }
+};
+const loadPlantsByCat = (id) => {
+  const url = `https://openapi.programming-hero.com/api/category/${id}`;
+  fetch(url)
+    .then((res) => res.json())
+    .then((json) => displayAllPlants(json.plants));
 };
