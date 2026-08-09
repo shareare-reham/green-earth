@@ -40,8 +40,8 @@ const displayAllPlants = (plants) => {
         
             <div class="items-center flex flex-col flex-grow">
                 <div class="my-3 flex-grow w-full">
-                <h2 class="card-title">${plant.name}</h2>
-                <p>
+                <h2 onclick="getDetails(${plant.id})" class="card-title">${plant.name}</h2>
+                <p class="line-clamp-2 text-sm text-gray-600">
                     ${plant.description}
                 </p>
                 <div class="flex justify-between items-center mt-2">
@@ -79,3 +79,32 @@ const activeCat = (id) => {
   activeBtn.classList.add("active-btn");
 };
 removeAtvBtn();
+
+const getDetails = (id) => {
+  const url = `https://openapi.programming-hero.com/api/plant/${id}`;
+  fetch(url)
+    .then((res) => res.json())
+    .then((json) => displayModal(json.plants));
+};
+
+const displayModal = (details) => {
+  const detailModal = document.getElementById("my_modal_1");
+  detailModal.innerHTML = `
+      <div class="modal-box">
+        <div class="space-y-4">
+          <h3 class="text-lg font-bold">${details.name}</h3>
+          <img class="w-full h-64 object-cover rounded-xl" src="${details.image}" alt="" />
+          <h3><span class="text-md font-semibold">Category: </span>${details.category}</h3>
+          <h3><span class="text-md font-semibold">Price: $</span>${details.price}</h3>
+          <h3><span class="text-md font-semibold">Description: </span>${details.description}</h3>
+        </div>
+        <div class="modal-action">
+          <form method="dialog">
+            <!-- if there is a button in form, it will close the modal -->
+            <button class="btn">Close</button>
+          </form>
+        </div>
+      </div>
+  `;
+  detailModal.showModal();
+};
