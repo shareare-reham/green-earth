@@ -1,169 +1,63 @@
-## WELCOME TO ( সহজ সরল সিম্পল ) ASSIGNMENT-006
+# Green Earth 🌱
 
-### 📅 Deadline For 60 marks: 9th September, 2025 (11:59 pm ⏱️)
+Green Earth is a responsive front-end web application built to promote a global tree plantation initiative. The platform allows users to explore different tree categories, view detailed plant cards fetched dynamically, and engage with a campaign designed to restore natural habitats and combat climate change.
 
-### 📅 Deadline For 50 marks : 13th September , 2025 (6:00 pm⏱️)
-
-### 📅 Deadline For 30 marks: Any time after 13the September , 2025 (6:01 pm⏱️).
+**Live Demo:** [View Green Earth Here](https://shareare-reham.github.io/green-earth/)
 
 ---
-# Green Earth
 
+## 🚀 Features
 
-## Private Repository: https://classroom.github.com/a/nVZrg5R9 
-
-## Alternative Private Repository: https://classroom.github.com/a/KCGI14ST 
-
-## Alternative Private Repository: https://classroom.github.com/a/JMuIYqgK 
-
-
----
-🌴 API Endpoints
----
-1. Get 🌴All Plants
-```bash
-https://openapi.programming-hero.com/api/plants
-```
-
-2. Get 🌴All categories <br/>
-```bash
-https://openapi.programming-hero.com/api/categories
-```
-
-
-3. Get 🌴plants by categories <br/>
-```bash
-https://openapi.programming-hero.com/api/category/${id}
-```
-
-```bash
-https://openapi.programming-hero.com/api/category/1
-```
-
-4. Get 🌴Plants Detail <br/>
-
-```bash
-https://openapi.programming-hero.com/api/plant/${id}
-```
-
-```bash
-https://openapi.programming-hero.com/api/plant/1
-```
----
-
-
-
-
-## ✅ Main Requirements 
-
-#### 1) Navbar
-
-- Website **logo/name** on the **left**  
-- **Menu items** in the **center** 
-- **Plant a Tree button** on the **right** 
-
-#### 2) Banner 
-- A **background image**  
-- A **title** and **subtitle**  
-- A **centered button**  
-
-#### 3) About Campaign
-- **Section heading**  
-- **Image on the left**, **text on the right**  
-
-#### 4) Our Impact Section 
-- Show **3 cards** with campaign **statistics**  
-
-#### 5) Plant a Tree Today Section & Footer
-- **Form**: Name, Email, Number of Trees  
-- **Footer** with copyright info 
-
-#### 6) Responsiveness 
-- Website must be **mobile responsive**  
+*   **Dynamic Data Integration:** Fetches and displays tree categories and individual plant data dynamically from an external REST API.
+*   **Interactive Filtering:** Users can click on specific categories to filter the displayed plants in real-time.
+*   **Responsive UI/UX:** A fully mobile-responsive layout ensuring a seamless browsing experience across desktop, tablet, and mobile devices.
+*   **Modern Styling:** Utilizes a clean, nature-inspired color palette built with utility-first CSS and pre-built UI components.
+*   **Donation Simulation:** Includes a styled form for users to simulate donating and selecting the number of trees they wish to plant.
 
 ---
-#### 7) Create a README file to answer the following question-
 
+## 🛠️ Technologies Used
 
-#### 1) What is the difference between var, let, and const?
-
-#### 2) What is the difference between map(), forEach(), and filter()? 
-
-#### 3) What are arrow functions in ES6?
-
-#### 4) How does destructuring assignment work in ES6?
-
-#### 5) Explain template literals in ES6. How are they different from string concatenation?
-
-## ⚙️ Functionalities 
-
-1) Category Loading 
-Load Tree Categories dynamically on the left side.
-
-2) Category Click → Tree Data 
-On clicking a category: load trees of that category.
-
-Display in a 3-column card layout.
-
-3) Card Contents 
- Each card includes:
-
-        - Image
-
-        -  Name
-
-        - Short description
-
-        - Category
-
-        - Price
-
-        - Add to Cart button
-
-4) Modal on Card Click 
-Clicking a tree name on a card opens a modal with full tree details.
-
-
-##  🧪 Challenges 
-
-
-    1) Add to Cart 
-    Clicking Add to Cart: - Adds the tree to Cart List
-                          - Shows tree name 
-
-    2) Total Calculation 
-    Calculate total price of trees in cart.
-
-    3) Remove from Cart 
-    Clicking ❌ removes tree and deducts price from total.
-
-    4) Loading Spinner
-    Show spinner while data is loading.
-
-    5) Active Button State 
-    Highlight active category button when selected.
-
-
-
-🧰 Technology Stack:
-        
-        HTML
-
-        CSS (Vanilla / Tailwind / DaisyUI)
-
-        JavaScript (Vanilla only, no frameworks)
-
-📌 Rules
-✅ At least 5 meaningful commits
-
-❌ No dummy text or Lorem Ipsum — must use relevant content
-
-
-
-
-
-## 🔗 Submission
-- **Live Link :** YOUR_DEPLOYED_URL_HERE  
-- **GitHub Private Repository:** YOUR_REPO_URL_HERE  
+*   **HTML5:** Semantic markup for page structure.
+*   **JavaScript (ES6+):** Vanilla JavaScript used for DOM manipulation, event handling, and asynchronous API requests (`fetch`).
+*   **Tailwind CSS (v4):** Integrated via CDN for rapid, responsive, and utility-based styling.
+*   **DaisyUI (v5):** A Tailwind CSS component library used for elegant, pre-built elements like buttons, navbars, and cards.
+*   **Google Fonts:** Specifically utilizing the 'Roboto' font family for clean typography.
 
 ---
+
+## ⚙️ Getting Started
+
+To get a local copy up and running, follow these simple steps.
+
+### Prerequisites
+
+You only need a modern web browser and a code editor (like VS Code) to view and edit the project. No package manager or build step is required since the CSS frameworks are loaded via CDN.
+
+### Installation
+
+1.  **Clone the repository:**
+    ```bash
+    git clone [https://github.com/shareare-reham/green-earth.git](https://github.com/shareare-reham/green-earth.git)
+    ```
+2.  **Navigate to the project directory:**
+    ```bash
+    cd green-earth
+    ```
+3.  **Run the project:**
+    Open the `index.html` file in your preferred web browser. Alternatively, use an extension like "Live Server" in VS Code for a better development experience.
+
+---
+
+## 📂 Project Structure
+
+*   `index.html`: The main entry point of the application containing the structural layout.
+*   `script.js`: Contains all the logic for fetching API data, rendering categories, rendering plant cards, and handling active button states.
+*   `assets/`: Directory for static images (e.g., hero illustrations, about section imagery).
+
+---
+
+## 👤 Author
+
+**Shahreare Riham**
+*   GitHub: [@shareare-reham](https://github.com/shareare-reham)
